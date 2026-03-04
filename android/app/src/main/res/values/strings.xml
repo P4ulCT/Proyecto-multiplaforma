@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">proyecto-paul-c</string>
+    <string name="title_activity_main">proyecto-paul-c</string>
+    <string name="package_name">proyecto.paul.c</string>
+    <string name="custom_url_scheme">proyecto.paul.c</string>
+</resources>
