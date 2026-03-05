@@ -110,7 +110,7 @@
 <script setup lang="ts">
   import { IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
   import { IonAccordion, IonAccordionGroup, IonItem, IonLabel, IonList, IonAvatar } from '@ionic/vue';
-  import { useUserStore } from '@/store/user';
+  import { useUserStore } from '@/stores/user';
   import { useRouter } from 'vue-router';
   
   const userStore = useUserStore();

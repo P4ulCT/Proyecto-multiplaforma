@@ -42,7 +42,7 @@
 import { IonPage, IonHeader, IonToolbar, 
     IonTitle, IonContent, alertController, 
     IonItem, IonInput, IonButton, IonLabel, IonButtons } from '@ionic/vue';
-import { useUserStore } from '@/store/user';
+import { useUserStore } from '@/stores/user';
 import { useRouter } from 'vue-router';
 
 const userStore = useUserStore();

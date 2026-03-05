@@ -66,10 +66,11 @@
 <script lang="ts" setup>
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonItem, 
     IonInput, IonButton, IonLabel, IonButtons, alertController } from '@ionic/vue';
-import { useUserStore } from '@/store/user';  // CAMBIADO: stores → store
+import { useUserStore } from '@/stores/user';
 import { useRouter } from 'vue-router';
 import { useVuelidate } from '@vuelidate/core'
 import { required, email, minLength } from '@vuelidate/validators'
+
 const userStore = useUserStore();
 const router = useRouter();
 
@@ -91,6 +92,7 @@ const rules = {
 const $v = useVuelidate(rules, userStore.registro);
 
 function handleRegister() {
+
     $v.value.$touch();
     if(!$v.value.$invalid) {
         userStore.$registro().then( () => {
@@ -98,9 +100,9 @@ function handleRegister() {
         }).catch( error => {
             alertController.create({
                 header: 'Error de registro',
-                message: error.response?.data?.message || 'Error en el registro',
+                message: error.response.data.message,
                 buttons: ['Continuar'],
-            }).then(alert => alert.present());
+                }).then(alert => alert.present());
         })
     }
 }   
