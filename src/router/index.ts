@@ -27,6 +27,10 @@ const routes: Array<RouteRecordRaw> = [
       requiresAuth: false
     },
   },
+  {path: '/camara', 
+    name: 'Camara', 
+    component: () => import('@/views/Camara.vue'), 
+    meta: { requiresAuth: false }},
   {
     path: '/seccion',
     name: 'Seccion',
